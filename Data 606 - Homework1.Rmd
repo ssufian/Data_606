@@ -1,0 +1,150 @@
+---
+title: "DATA 606  Chap 1 - Intro to Data"
+author: "Sufian"
+date: "9/2/2019"
+output:
+  html_document: default
+  pdf_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = F)
+```
+
+**Smoking habits of UK residents**. (1.10, p. 20) A survey was conducted to study the smoking habits of UK residents. Below is a data matrix displaying a portion of the data collected in this survey. Note that “£” stands for British Pounds Sterling, "cig" stands for cigarettes, and "N/A" refers to a missing component of the data.
+
+\begin{center}
+\scriptsize{
+\begin{tabular}{rccccccc}
+\hline
+	& sex 	 & age 	& marital 	& grossIncome 					     & smoke & amtWeekends	& amtWeekdays \\ 
+\hline
+1 	& Female & 42 	& Single 	& Under $\pounds$2,600 			     & Yes 	 & 12 cig/day   & 12 cig/day \\ 
+2 	& Male	 & 44	& Single 	& $\pounds$10,400 to $\pounds$15,600 & No	 & N/A 			& N/A \\ 
+3 	& Male 	 & 53 	& Married   & Above $\pounds$36,400 		     & Yes 	 & 6 cig/day 	& 6 cig/day \\ 
+\vdots & \vdots & \vdots & \vdots & \vdots 				             & \vdots & \vdots 	    & \vdots \\ 
+1691 & Male  & 40   & Single 	& $\pounds$2,600 to $\pounds$5,200   & Yes 	 & 8 cig/day 	& 8 cig/day \\   
+\hline
+\end{tabular}
+}
+\end{center}
+
+```{r}
+```
+Prob 1.10
+What does each row of the data matrix represent?
+
+(a)  Each row is a case or observational unit
+
+How many participants were included in the survey?
+
+(b) 1691 participants
+
+
+(c) Indicate whether each variable in the study is numerical or categorical. If numerical, identify as continuous or discrete. If categorical, indicate if the variable is ordinal.
+
+Sex -> categorical ->nominal
+
+Age -> numerical -> discrete
+
+marital -> categorical -> nominal
+
+gross income -> numerical -> continous
+
+smoke -> categorical -> nominal
+
+amt weekend -> categorical -> ordinal
+
+amt weekdays -> categorical -> ordinal
+
+--------------------------------------------------------------------------------
+
+\clearpage
+
+**Cheaters, scope of inference**. (1.14, p. 29) Exercise 1.5 introduces a study where researchers studying the relationship between honesty, age, and self-control conducted an experiment on 160 children between the ages of 5 and 15[^1]. The researchers asked each child to toss a fair coin in private and to record the outcome (white or black) on a paper sheet, and said they would only reward children who report white. Half the students were explicitly told not to cheat and the others were not given any explicit instructions. Differences were observed in the cheating rates in the instruction and no instruction groups, as well as some differences across children’s characteristics within each group.
+
+(a) Identify the population of interest and the sample in this study.
+
+Sample size = 160 children
+
+Population of Interest = Children ages between 5 to 15
+
+(b) Comment on whether or not the results of the study can be generalized to the population, and
+if the findings of the study can be used to establish causal relationships.
+
+No, is hard to use the results to generalize because of:
+(1)  Not enough information as to how the test was conducted.  
+
+No indication from the description to the distribution of the data set such as Age groups, sex, race etc...
+
+(2)  Although there were two control & treatment groups but it does not state what kind of in each groups;  for example, whether they are all male, half male and half female or all female. 
+
+(3)  The experiment does not state whether differences in the kids' characteristics (factors) were taken into account
+
+--------------------------------------------------------------------------------
+
+\clearpage
+
+**Reading the paper**. (1.28, p. 31) Below are excerpts from two articles published in the NY Times:
+
+(a) An article titled Risks: Smokers Found More Prone to Dementia states the following:
+
+"Researchers analyzed data from 23,123 health plan members who participated in a voluntary exam and health behavior survey from 1978 to 1985, when they were 50-60 years old. 23 years later, about 25% of the group had dementia, including 1,136 with Alzheimer's disease and 416 with vascular dementia. After adjusting for other factors, the researchers concluded that pack-a- day smokers were 37% more likely than nonsmokers to develop dementia, and the risks went up with increased smoking; 44% for one to two packs a day; and twice the risk for more than two packs."
+
+Based on this study, can we conclude that smoking causes dementia later in life? Explain your reasoning.
+
+I believe this is well conducted study with stratification of groupings. 
+
+Reasons:
+
+1. The sample size of 23,123 of 50-60 year old members from health plan seems to be large enough and factors were taken into account to normalize the data
+
+2. Clusters or groups from 23,123 are well divided in different groups such as; non-smoke, pack-a-day smoke, 1-2 pack day smoke, and  2 pack day smoke.
+
+--------------------------------------------------------------------------------
+
+\clearpage
+(b) Another article titled The School Bully Is Sleepy states the following:
+
+"The University of Michigan study, collected survey data from parents on each child's sleep habits and asked both parents and teachers to assess behavioral concerns. About a third of the students studied were identified by parents or teachers as having problems with disruptive behavior or bullying. The researchers found that children who had behavioral issues and those who were identified as bullies were twice as likely to have shown symptoms of sleep disorders."
+
+A friend of yours who read the article says, "The study shows that sleep disorders lead to bullying in school children." Is this statement justified? If not, how best can you describe the conclusion that can be drawn from this study?
+
+No, the study does not state if there were any bullies for kids that did not have sleep abnormality.  They did not state if there were other factors involved that were taken into account such as gross income, race, family structure such as single moms etc...It simply stated that of the bullies, they identified, sleeping disorder symptons were found to be bullies but it may not be the only explaination to their bullying behaviors.  For instance, there are other socio-economic factors that can lead to social behaviorial issues beside sleeping problems.
+
+--------------------------------------------------------------------------------
+
+\clearpage
+
+**Exercise and mental health.** (1.34, p. 35) A researcher is interested in the effects of exercise on mental health and he proposes the following study: Use stratified random sampling to ensure rep- resentative proportions of 18-30, 31-40 and 41-55 year olds from the population. Next, randomly assign half the subjects from each age group to exercise twice a week, and instruct the rest not to exercise. Conduct a mental health exam at the beginning and at the end of the study, and compare the results.
+
+(a) What type of study is this?
+
+Experimental study
+
+(b) What are the treatment and control groups in this study?
+
+treatment groups: people in each age group to exercise twice a week
+control groups:people in each age group not to exercise
+
+(c) Does this study make use of blocking? If so, what is the blocking variable?
+
+yes, 18-30, 31-40 and 41- 55 year olds
+
+(d) Does this study make use of blinding?
+
+No, Participants who don't exercise were informed of such an instructions
+
+(e) Comment on whether or not the results of the study can be used to establish a causal rela- tionship between exercise and mental health, and indicate whether or not the conclusions can be generalized to the population at large.
+
+Yes, the experiment seem to be well constructed. Provided the sample size is large enough, 
+and that the sampling ensures representative proportions of age groups from the population, I think the results can be use to generalize to the populaton
+
+(f) Suppose you are given the task of determining if this proposed study should get funding. Would you have any reservations about the study proposal?
+
+Yes and but with caution.  Yes, because I think the study was well thougth out but have some reservations due to certain things such as no blinding for instance
+
+
+
+
+
