@@ -17,10 +17,6 @@ output:
     - multicol
     - multirow
     
---------------------------------------------------------------------------------
-
-\clearpage
-
 
 Rpubs link:
 
@@ -28,12 +24,8 @@ http://rpubs.com/ssufian/533189
 
 Github link:
 
+https://github.com/ssufian/Data_606
 
-
-
---------------------------------------------------------------------------------
-
-\clearpage
 
 **Area under the curve, Part I**. (4.1, p. 142) What percent of a standard normal distribution $N(\mu=0, \sigma=1)$ is found in each region? Be sure to draw a graph.
 
@@ -45,6 +37,7 @@ Github link:
 --------------------------------------------------------------------------------
 
 \clearpage
+
 ```{r}
 # use the DATA606::normalPlot function
 rm(list = ls())
@@ -299,23 +292,23 @@ dgeom(9, 0.02)
 
 Ans:
 
-$P(no defects in 100) = (1-0.02)^{100} = 0.1326$
+$P(no-defects-in-100) = (1-0.02)^{100} = 0.1326$
 
 (c) On average, how many transistors would you expect to be produced before the first with a defect? What is the standard deviation?
 
 Ans:
 
-$\mu $ = 1/p = 1/0.02 = 50
+$\mu  = 1/p = 1/0.02 = 50$
 
-$\sigma $ = sqrt(p/(1-p)^2)=sqrt(0.02/(1-0.02)^2)=0.1443
+$\sigma  = sqrt(p/(1-p)^2=sqrt(0.02/(1-0.02)^2)=0.1443$
 
 (d) Another machine that also produces transistors has a 5% defective rate where each transistoris produced independent of the others. On average how many transistors would you expect to be produced with this machine before the first with a defect? What is the standard deviation?
 
 Ans:
 
-$\mu $ = 1/p = 1/0.05 = 20
+$\mu= 1/p = 1/0.05 = 20$
 
-$\sigma $ = sqrt(p/(1-p)^2)=sqrt(0.05/(1-0.05)^2)=0.235
+$\sigma  = sqrt(p/(1-p)^2=sqrt(0.05/(1-0.05)^2)=0.235$
  
 
 (e) Based on your answers to parts (c) and (d), how does increasing the probability of an event affect the mean and standard deviation of the wait time until success?
