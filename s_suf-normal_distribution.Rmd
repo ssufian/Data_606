@@ -18,6 +18,12 @@ http://rpubs.com/ssufian/533410
 
 Github:
 
+https://github.com/ssufian/Data_606
+
+
+--------------------------------------------------------------------------------
+
+\clearpage
 
 
 In this lab we'll investigate the probability distribution that is most central
