@@ -11,17 +11,13 @@ output:
 ---
 
 
---------------------------------------------------------------------------------
-
-\clearpage
-
 Rpub link:
 
 http://rpubs.com/ssufian/533918
 
 Github link:
 
-
+https://github.com/ssufian/Data_606
 
 
 ## Sampling from Ames, Iowa
