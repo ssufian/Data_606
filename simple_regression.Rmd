@@ -44,7 +44,7 @@ Let's load up the data for the 2011 season.
 download.file("http://www.openintro.org/stat/data/mlb11.RData", destfile = "mlb11.RData")
 load("mlb11.RData")
 
-head(mlb11,n=7)
+head(mlb11,n=3)
 ```
 
 In addition to runs scored, there are seven traditionally used variables in the 
@@ -90,13 +90,13 @@ c) This is a toughie as the saying goes "Looks can be deceiving"; looking at the
 
 - But the residuals vs independent variables and histogram of residuals do not look too bad
 
-- However, the last test of Shapior-Wilk test of the parents (NOT the Residuals) showed that the parents
+- However, the last test of Shapior-Wilk test of the parents & the Residuals showed that the parents
 
-are normal.
+and the residuals are all normal.
 
 Therefore I would be OK with using it as linear model predictive tool despite some mis-givings in the 
 
-residual tests
+visual residual tests
 
 
 ```{r, echo=FALSE, message=FALSE, warning=FALSE, fig.show="hold", out.width="50%", fig.height=4}
@@ -140,6 +140,12 @@ lines(xfit, yfit)
 shapiro.test(mlb11$runs) #Shapiro test for normality; making sure the parrents are really normal
 #shapiro test 2
 shapiro.test(mlb11$at_bats)
+#Shapiro test 3 - to make sure if residuals are actually normal
+sp_wlk = lm(runs ~ at_bats, data = mlb11)
+
+shapiro.test(sp_wlk$residuals)
+
+
 ```
 
 
@@ -150,6 +156,8 @@ Because P-values are greater than 0.05, we can be 95% confident that run & at_ba
 sure (this is only checking parents and not the residuals)
 
 My assumption is if the parents are normal, the residuals should behave somewhat like the parents
+
+And the last Shapiro Wilt test, ascertained that indeed the residuals were actually normal as well
 
 --------------------------------------------------------------------------------
 
@@ -606,7 +614,7 @@ hist(m10$residuals)
 
 ```{r}
 qqnorm(m10$residuals)
-qqline(m10$residuals)  # adds diagonal line to the normal prob plot
+qqline(m10$residuals)  # adds diagonal line to the normal prob plot 
 ```
 
 
